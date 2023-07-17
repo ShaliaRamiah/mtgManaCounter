@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+    <h1>MTG Land Counter</h1>
+    <div class="container">
+        <div class="swamp">
+            <img src="images/swamp.png" alt="Swamp Image">
+            <button onclick="increment('scounting')">+</button>
+            <h2 id="scounting">0</h2>
+            <button onclick="decrement('scounting')">-</button>
+        </div>
+
+        <div class="plains">
+            <img src="images/plains.png" alt="Plains Image">
+            <button onclick="increment('pcounting')">+</button>
+            <h2 id="pcounting">0</h2>
+            <button onclick="decrement('pcounting')">-</button>
+        </div>
+
+        <div class="mountain">
+            <img src="images/mountain.png" alt="Mountain Image">
+            <button onclick="increment('mcounting')">+</button>
+            <h2 id="mcounting">0</h2>
+            <button onclick="decrement('mcounting')">-</button>
+        </div>
+
+        <div class="forest">
+            <img src="images/forest.png" alt="Forest Image">
+            <button onclick="increment('fcounting')">+</button>
+            <h2 id="fcounting">0</h2>
+            <button onclick="decrement('fcounting')">-</button>
+        </div>
+
+        <div class="island">
+            <img src="images/island.png" alt="Island Image">
+            <button onclick="increment('icounting')">+</button>
+            <h2 id="icounting">0</h2>
+            <button onclick="decrement('icounting')">-</button>
+        </div>
+    </div>
+
+        <script src="app.js"></script>
+
+</body>
+</html>
