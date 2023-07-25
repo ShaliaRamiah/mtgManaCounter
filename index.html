@@ -1,52 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Track that mana!</title>
     <link rel="stylesheet" href="style.css" />
-
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
+
 <body>
-    <h1>MTG Land Counter</h1>
-    <div class="container">
-        <div class="swamp">
-            <img src="images/swamp.png" alt="Swamp Image">
-            <button onclick="increment('scounting')">+</button>
-            <h2 id="scounting">0</h2>
-            <button onclick="decrement('scounting')">-</button>
+    <div class="outer-container">
+        <div class="inner-container">
+            <div class="type">
+                <div class="button-trigger">
+                    <button class="nes-btn" onclick="increment('scounting')">+</button>
+                </div>
+                <img src="images/swamp.png" alt="Swamp Image">
+                <h2 class="nes-text is-primary" id="scounting">0</h2>
+                <div class="button-trigger">
+                    <button class="nes-btn" onclick="decrement('scounting')">-</button>
+                </div>
+            </div>
+            <div class="type">
+                <div class="button-trigger">
+                    <button class="nes-btn" onclick="increment('pcounting')">+</button>
+                </div>
+                <img src="images/plains.png" alt="Plains Image">
+                <h2 class="nes-text is-primary" id="pcounting">0</h2>
+                <div class="button-trigger">
+                    <button class="nes-btn" onclick="decrement('pcounting')">-</button>
+                </div>
+            </div>
+            <div class="type">
+                <div class="button-trigger">
+                    <button class="nes-btn" onclick="increment('mcounting')">+</button>
+                </div>
+                <img src="images/mountain.png" alt="Mountain Image">
+                <h2 class="nes-text is-primary" id="mcounting">0</h2>
+                <div class="button-trigger">
+                    <button class="nes-btn" onclick="decrement('mcounting')">-</button>
+                </div>
+            </div>
+            <div class="type">
+                <div class="button-trigger">
+                    <button class="nes-btn" onclick="increment('fcounting')">+</button>
+                </div>
+                <img src="images/forest.png" alt="Forest Image">
+                <h2 class="nes-text is-primary" id="fcounting">0</h2>
+                <div class="button-trigger">
+                    <button class="nes-btn" onclick="decrement('fcounting')">-</button>
+                </div>
+            </div>
+            <div class="type">
+                <div class="button-trigger">
+                    <button class="nes-btn" onclick="increment('icounting')">+</button>
+                </div>
+                <img src="images/island.png" alt="Island Image">
+                <h2 class="nes-text is-primary" id="icounting">0</h2>
+                <div class="button-trigger">
+                    <button class="nes-btn" onclick="decrement('icounting')">-</button>
+                </div>
+            </div>
         </div>
-
-        <div class="plains">
-            <img src="images/plains.png" alt="Plains Image">
-            <button onclick="increment('pcounting')">+</button>
-            <h2 id="pcounting">0</h2>
-            <button onclick="decrement('pcounting')">-</button>
-        </div>
-
-        <div class="mountain">
-            <img src="images/mountain.png" alt="Mountain Image">
-            <button onclick="increment('mcounting')">+</button>
-            <h2 id="mcounting">0</h2>
-            <button onclick="decrement('mcounting')">-</button>
-        </div>
-
-        <div class="forest">
-            <img src="images/forest.png" alt="Forest Image">
-            <button onclick="increment('fcounting')">+</button>
-            <h2 id="fcounting">0</h2>
-            <button onclick="decrement('fcounting')">-</button>
-        </div>
-
-        <div class="island">
-            <img src="images/island.png" alt="Island Image">
-            <button onclick="increment('icounting')">+</button>
-            <h2 id="icounting">0</h2>
-            <button onclick="decrement('icounting')">-</button>
-        </div>
+        <button type="button" class="nes-btn is-primary" onclick="reset()">reset</button>
     </div>
-
-        <script src="app.js"></script>
-
+    <script src="app.js"></script>
 </body>
+
 </html>

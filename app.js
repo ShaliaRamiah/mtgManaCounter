@@ -4,6 +4,17 @@ let mountain = 0;
 let forest = 0;
 let island = 0;
 
+
+function reset() {
+    swamp = 0;
+    plains = 0;
+    mountain = 0;
+    forest = 0;
+    island = 0;
+    for (let id of ["scounting", 'pcounting', "mcounting", 'fcounting', 'icounting']) {
+        document.getElementById(id).innerText = 0;
+    }
+}
 // Function to increment the counter
 function increment(id) {
     switch (id) {
