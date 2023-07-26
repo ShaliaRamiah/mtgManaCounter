@@ -22,11 +22,9 @@ body, html, .inner-container, .outer-container  {
     width: 20%;   
 }
 img {
-    max-width: 100px;
-    width: 100px;
-    max-height: 100px;
-    height: 100px;
+    width: 100%;
     margin-bottom: 10px; 
+    object-fit: contain;
 }
 
 .button-trigger {
