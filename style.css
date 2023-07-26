@@ -1,6 +1,10 @@
 body, html, .inner-container, .outer-container  {
     height: 100%;
 }
+* {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
 .inner-container {
     display: flex;
     flex-direction: row;
