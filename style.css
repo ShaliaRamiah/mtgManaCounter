@@ -23,13 +23,15 @@ html,
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 20%;
+  gap: 10px;
 }
 
 .button-trigger {
   display: flex;
   width: 100%;
-  flex: 1;
+  /* flex: 1; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
