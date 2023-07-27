@@ -3,10 +3,8 @@ html,
 .inner-container,
 .outer-container {
   height: 100%;
-}
-* {
-  -ms-touch-action: none;
-  touch-action: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 .inner-container {
