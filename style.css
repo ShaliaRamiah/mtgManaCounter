@@ -1,89 +1,72 @@
-body, html, .inner-container, .outer-container  {
-    height: 100%;
+body,
+html,
+.inner-container,
+.outer-container {
+  height: 100%;
 }
 * {
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
+
 .inner-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
 }
+
 .outer-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
 }
+
 .type {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20%;   
-}
-img {
-    width: 100%;
-    margin-bottom: 10px; 
-    object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
 }
 
 .button-trigger {
-    display: flex;
-    width: 100%;
-    flex:1;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Adding some margin and padding to create spacing between elements */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.mana {
+  border-radius: 30px;
+  width: 50px;
+  height: 50px;
+  background-image: url(./images/mtg-color.png);
+  background-repeat: no-repeat;
 }
 
-/* Styling the individual sections with some spacing and alignment */
-.swamp,
-.plains,
-.mountain,
-.forest,
+.plains {
+  background-color: #ffeece;
+  background-position: 2px 2px;
+  background-size: 165px 105px;
+}
+.swamp {
+  background-color: #ccc4c0;
+  background-position: -92px -59px;
+  background-size: 165px 105px;
+}
+.forest {
+  background-color: #9cd5af;
+  background-size: 165px 105px;
+  background-position: -118px 2px;
+}
+.mountain {
+  background-color: #faac90;
+  background-size: 165px 105px;
+  background-position: -23px -59px;
+}
 .island {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
+  background-color: #abe1fa;
+  background-position: -62px 2px;
+  background-size: 165px 105px;
 }
-
-/* Styling the images */
-.swamp img,
-.plains img,
-.mountain img,
-.forest img,
-.island img {
-    max-width: 100px; 
-    max-height: 100px; 
-    margin-bottom: 10px; 
-}
-
-h2 {
-    font-size: 45px;
-    margin: 0;
-}
-
-/* button {
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
-    background-color: rgb(0, 0, 0);
-    color: honeydew;
-    border: none;
-    cursor: pointer;
-    margin: 5px;
-}
-
-button:hover {
-    background-color: rgb(73, 73, 71);
-    color: grey;
-} */
