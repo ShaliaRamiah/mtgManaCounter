@@ -1,61 +1,56 @@
-let swamp = 0;
-let plains = 0;
-let mountain = 0;
-let forest = 0;
-let island = 0;
+"use strict"
 
-// Function to increment the counter
-function increment(id) {
-    switch (id) {
-        case 'scounting':
-            swamp++;
-            document.getElementById(id).innerText = swamp;
-            break;
-        case 'pcounting':
-            plains++;
-            document.getElementById(id).innerText = plains;
-            break;
-        case 'mcounting':
-            mountain++;
-            document.getElementById(id).innerText = mountain;
-            break;
-        case 'fcounting':
-            forest++;
-            document.getElementById(id).innerText = forest;
-            break;
-        case 'icounting':
-            island++;
-            document.getElementById(id).innerText = island;
-            break;
-        default:
-            break;
+const mana = {
+    swamp: 0,
+    plains: 0,
+    mountain: 0,
+    forest: 0,
+    island: 0
+};
+
+function resetThings() {
+    for (let key of Object.keys(mana)) {
+        mana[key] = 0;
+        setValue(key, mana[key]);
+    }
+    setValue("total", 0);
+}
+
+function change(color, direction) {
+    direction ? mana[color]++ : mana[color]--;
+    setValue(color, mana[color]);
+    calcTotal();
+}
+
+function calcTotal() {
+    let total = 0;
+    for (let key of Object.keys(mana)) {
+        total += mana[key];
+    }
+    setValue("total", total);
+}
+
+function setValue(elementId, value) {
+    const element = document.getElementById(elementId);
+    element.innerHTML = value;
+
+    // potentially move to another function
+    if (elementId !== 'total') {
+        setState(elementId, (mana[elementId] <= 0));
     }
 }
 
-// Function to decrement the counter
-function decrement(id) {
-    switch (id) {
-        case 'scounting':
-            swamp--;
-            document.getElementById(id).innerText = swamp;
-            break;
-        case 'pcounting':
-            plains--;
-            document.getElementById(id).innerText = plains;
-            break;
-        case 'mcounting':
-            mountain--;
-            document.getElementById(id).innerText = mountain;
-            break;
-        case 'fcounting':
-            forest--;
-            document.getElementById(id).innerText = forest;
-            break;
-        case 'icounting':
-            island--;
-            document.getElementById(id).innerText = island;
-            break;
-        default:
-            break;
+function setState(elementId, direction, suffix = 'desc') {
+    const id = `${elementId}-${suffix}`;
+    const element = document.getElementById(id);
+    element.disabled = !!direction;
+}
+
+function initialiseState() {
+    for (let key of Object.keys(mana)) {
+        if (mana[key] <= 0) {
+            setState(key, true);
+        }
     }
 }
+initialiseState();
