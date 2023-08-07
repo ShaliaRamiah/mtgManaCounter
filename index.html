@@ -19,6 +19,16 @@
         </div>
         <div class="inner-container">
             <div class="type">
+                <div class="colorless"></div>
+                <h2 class="nes-text is-primary" id="colorless">0</h2>
+                <div class="button-trigger">
+                    <button class="nes-btn" onclick="change('colorless',true)">+</button>
+                </div>
+                <div class="button-trigger">
+                    <button class="nes-btn" id="colorless-desc" onclick="change('colorless',false)">-</button>
+                </div>
+            </div>
+            <div class="type">
                 <div class="mana swamp"></div>
                 <h2 class="nes-text is-primary" id="swamp">0</h2>
                 <div class="button-trigger">
@@ -69,7 +79,12 @@
                 </div>
             </div>
         </div>
-        <button type="button" class="nes-btn is-primary" onclick="resetThings()">reset</button>
+        <div>
+            <button type="button" class="nes-btn is-primary" onclick="resetThings()">reset</button>
+            <button type="button" class="nes-btn is-primary" onclick="addOne(true)">+1</button>
+            <button type="button" class="nes-btn is-primary" onclick="addOne(false)">-1</button>
+        </div>
+
     </div>
     <script src="app.js"></script>
 </body>
