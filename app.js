@@ -5,7 +5,8 @@ const mana = {
     plains: 0,
     mountain: 0,
     forest: 0,
-    island: 0
+    island: 0,
+    colorless: 0
 };
 
 function resetThings() {
@@ -14,6 +15,14 @@ function resetThings() {
         setValue(key, mana[key]);
     }
     setValue("total", 0);
+}
+
+function addOne(direction) {
+    for (let key of Object.keys(mana)) {
+        direction ? mana[key]++ : (mana[key] === 0 ? 0 : mana[key]--);
+        setValue(key, mana[key]);
+    }
+    calcTotal();
 }
 
 function change(color, direction) {
