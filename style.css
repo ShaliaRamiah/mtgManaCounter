@@ -17,6 +17,7 @@ html,
   display: flex;
   flex-direction: column;
   justify-content: stretch;
+  padding: 20px;
 }
 
 .type {
@@ -69,4 +70,18 @@ html,
   background-color: #abe1fa;
   background-position: -62px 2px;
   background-size: 165px 105px;
+}
+.colorless {
+  background-color: white;
+  border-radius: 30px;
+  width: 50px;
+  height: 50px;
+  background-image: url(./images/colorless.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.nes-btn {
+  min-width: 50px;
+  min-height: 50px;
 }
